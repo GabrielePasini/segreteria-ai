@@ -1,0 +1,8 @@
+# Segreti: la chiave API non deve mai finire su GitHub
+.env
+
+# Ambiente virtuale: si ricrea con requirements.txt, non va salvato
+.venv/
+
+# File temporanei che Python genera da solo
+__pycache__/
