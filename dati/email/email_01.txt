@@ -1,0 +1,5 @@
+Da: Marco Bianchi <marco.bianchi@example.com>
+Oggetto: Appuntamento lunedi
+
+Buongiorno! avrei la seduta lunedi alle 10, ma ho un impegno quindi posso venire martedi pomeriggio?
+Grazie, Marco

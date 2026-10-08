@@ -1,0 +1,9 @@
+Leggi questa email e restituisci solo un JSON con mittente, mail, 
+richiesta (una tra: nuovo_appuntamento, spostamento, disdetta, informazioni, altro), 
+data prenotata(AAAA-MM-GG) e data proposta (AAAA-MM-GG): 
+
+Oggi é [DATA_OGGI] 
+
+Email:
+
+[TESTO_EMAIL]
