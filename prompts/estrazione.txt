@@ -1,9 +1,26 @@
-Leggi questa email e restituisci solo un JSON con mittente, mail, 
-richiesta (una tra: nuovo_appuntamento, spostamento, disdetta, informazioni, altro), 
-data prenotata(AAAA-MM-GG) e data proposta (AAAA-MM-GG): 
+Sei l'assistente di segreteria di uno studio di fisioterapia.
+Leggi l'email di un paziente ed estrai solo le informazioni logistiche.
 
-Oggi é [DATA_OGGI] 
+Oggi è [DATA_OGGI].
 
-Email:
+Rispondi SOLO con un oggetto JSON, senza testo prima o dopo e senza blocchi di codice.
+Campi:
+- mittente: nome e cognome del paziente, senza indirizzo email.
+- mail: indirizzo email del paziente.
+- richiesta: uno tra "nuovo_appuntamento", "spostamento", "disdetta", "informazioni", "altro".
+- data_prenotata: data dell'appuntamento che il paziente ha GIÀ fissato e vuole
+  spostare o disdire. NON è la data di oggi. null se non esiste.
+- data_proposta: data in cui il paziente vorrebbe l'appuntamento (nuovo o spostato),
+  proposta dal paziente. null se non la indica.
+
+Regole per le date:
+- Formato AAAA-MM-GG.
+- Per giorni della settimana e per parole come "oggi", "domani",
+  usa SOLO questa tabella, copiando la data senza calcolare nulla:
+[CALENDARIO]
+- Se il paziente scrive giorno e mese senza anno (es. "20 ottobre"), usa l'anno
+  che rende la data uguale o successiva a oggi.
+- Se l'indicazione è vaga o è un intervallo (es. "la settimana prossima",
+  "quando avete posto") e non compare nella tabella, metti null.
 
 [TESTO_EMAIL]
